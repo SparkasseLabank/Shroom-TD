@@ -1,0 +1,216 @@
+{   "Classic Shroom" : {
+    "base": {"attack_value": 28, "range": 1, "shoot_interval": 20, "cost": 120},
+
+    "0": {  "path_idea" : "cheap upgrades but less powerful",
+        "1": {"upgrade_cost": 75, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "2": {"upgrade_cost": 100, "range": 1.1,  "icon": "up_range.png"},
+        "3": {"upgrade_cost": 125, "attack_value": 4, "icon": "up_damage.png"},
+        "4": {"upgrade_cost": 200, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "5": {"upgrade_cost": 250, "attack_value": 4, "icon": "up_damage.png"}},
+
+    "1": {  "path_idea" : "pricey upgrades but more powerful",
+        "1": {"upgrade_cost": 150, "range": 1.25, "icon": "up_range_2.png"},
+        "2": {"upgrade_cost": 200, "shoot_interval": 4, "icon": "up_speed_attack_2.png"},
+        "3": {"upgrade_cost": 275, "attack_value": 12, "icon": "up_damage_2.png"},
+        "4": {"upgrade_cost": 350, "shoot_interval": 4, "icon": "up_speed_attack_2.png"},
+        "5": {"upgrade_cost": 450, "attack_value": 12, "icon": "up_damage_2.png"}}
+},
+
+"Stun Shroom" : {
+    "base": {"attack_value": 0, "range": 1, "cost": 150, "shoot_interval": 45, "stun_time": 22},
+
+    "0": {  "path_idea" : "stunning machine with higher range & high attack speed",
+        "1": {"upgrade_cost": 175, "shoot_interval": 7, "icon": "up_speed_attack.png"},
+        "2": {"upgrade_cost": 200, "range": 1.15, "icon": "up_range.png"},
+        "3": {"upgrade_cost": 300, "shoot_interval": 8, "icon": "up_speed_attack.png"},
+        "4": {"upgrade_cost": 325, "range": 1.2, "icon": "up_range_2.png"},
+        "5": {"upgrade_cost": 400, "range": 1.1, "shoot_interval": 5, "icon": "up_range_speed_attack.png"}},
+
+    "1": {  "path_idea" : "long stun & damage to not let ennemies go further",
+        "1": {"upgrade_cost": 125, "stun_time": 2, "icon": "up_stun_time.png"},
+        "2": {"upgrade_cost": 150, "stun_time": 4, "icon": "up_stun_time.png"},
+        "3": {"upgrade_cost": 225, "attack_value": 8, "icon": "up_damage.png"},
+        "4": {"upgrade_cost": 300, "stun_time": 8, "shoot_interval": -10, "icon": "up_stun_time_attack_speed.png"},
+        "5": {"upgrade_cost": 450, "attack_value": 8, "shoot_interval": -15, "stun_time": 9, "icon": "up_stun_time_attack_speed_damage.png"}}
+},
+
+"Sniper Shroom" : {
+    "base" : {"attack_value": 20, "range": 1, "cost": 150, "shoot_interval": 30, "resistance_modifier": 1},
+
+    "0": { "path_idea" : "Very high range & fast attack speed",
+        "1" : {"upgrade_cost": 115, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "2" : {"upgrade_cost": 165, "range": 1.1, "icon": "up_range.png"},
+        "3" : {"upgrade_cost": 220, "shoot_interval": 6, "icon": "up_speed_attack_2.png"},
+        "4" : {"upgrade_cost": 300, "range": 1.25, "icon": "up_range_2.png"},
+        "5" : {"upgrade_cost": 350, "shoot_interval": 7, "icon": "up_speed_attack_2.png"}},
+
+    "1": {  "path_idea" : "high damage & resistance reduction",
+        "1" : {"upgrade_cost": 115, "attack_value": 2, "icon": "up_damage.png"},
+        "2" : {"upgrade_cost": 165, "attack_value": 3, "icon": "up_damage.png"},
+        "3" : {"upgrade_cost": 275, "attack_value": 5, "resistance_modifier": 0.75, "icon": "up_magical_resistance_damage.png"},
+        "4" : {"upgrade_cost": 350, "attack_value": 8, "resistance_modifier": 0.66, "icon": "up_magical_resistance_damage.png"},
+        "5" : {"upgrade_cost": 450, "attack_value": 10, "resistance_modifier": 0.5, "icon": "up_magical_resistance_damage.png"}}
+},
+
+"Boom Shroom" : {
+    "base" : {"attack_value": 60, "range": 1, "cost": 300, "shoot_interval": 90, "aoe": 100},
+
+    "0": {  "path_idea" : "high damage & aoe but slighly lower attack speed",
+        "1" : {"upgrade_cost": 150, "aoe": 15, "icon": "up_explosion_aoe.png"},
+        "2" : {"upgrade_cost": 250, "attack_value": 10, "icon": "up_damage.png"},
+        "3" : {"upgrade_cost": 350, "attack_value": 20, "shoot_interval": -5, "aoe": 15, "icon": "up_explosion_aoe_damage_down_speed_attack.png"},
+        "4" : {"upgrade_cost": 350, "attack_value": 10, "shoot_interval": -5, "icon": "up_damage_down_speed_attack.png"},
+        "5" : {"upgrade_cost": 550, "attack_value": 40, "shoot_interval": -20, "aoe": 20, "icon": "up_explosion_aoe_damage_down_speed_attack_2.png"}},
+
+    "1": {  "path_idea" : "high attack speed but slightly lower damage",
+        "1" : {"upgrade_cost": 100, "shoot_interval": 5, "icon": "up_speed_attack.png"},
+        "2" : {"upgrade_cost": 150, "shoot_interval": 5, "icon": "up_speed_attack.png"},
+        "3" : {"upgrade_cost": 250, "attack_value": -5, "shoot_interval": 10, "icon": "up_speed_attack_down_damage.png"},
+        "4" : {"upgrade_cost": 350, "attack_value": -5, "shoot_interval": 10, "icon": "up_speed_attack_down_damage.png"},
+        "5" : {"upgrade_cost": 450, "attack_value": -10, "shoot_interval": 20, "icon": "up_speed_attack_down_damage_2.png"}}
+},
+
+"Wizard Shroom" : {
+    "base" : {"attack_value": 20, "range": 1, "cost": 250, "shoot_interval": 30, "aoe": 110, "max_hit": 3},
+
+    "0": {  "path_idea" : "high range & number of hit",
+        "1" : {"upgrade_cost": 150, "max_hit": 1, "icon": "up_max_hit.png"},
+        "2" : {"upgrade_cost": 175, "range": 1.1, "icon": "up_range.png"},
+        "3" : {"upgrade_cost": 250, "range": 1.3, "aoe": 35, "icon": "up_wizard_aoe_range.png"},
+        "4" : {"upgrade_cost": 300, "max_hit": 2, "icon": "up_max_hit.png"},
+        "5" : {"upgrade_cost": 400, "range": 1.2, "aoe": 35, "max_hit": 4, "icon": "up_wizard_aoe_range_max_hit.png"}},
+
+    "1": {  "path_idea" : "higher attack speed & slightly higher damage",
+        "1" : {"upgrade_cost": 175, "attack_value": 4, "icon": "up_damage.png"},
+        "2" : {"upgrade_cost": 200, "shoot_interval": 3, "icon": "up_speed_attack.png"},
+        "3" : {"upgrade_cost": 275, "attack_value": 8, "icon": "up_damage_2.png"},
+        "4" : {"upgrade_cost": 350, "shoot_interval": 6, "max_hit": -1, "icon": "up_speed_attack_down_max_hit.png"},
+        "5" : {"upgrade_cost": 450, "attack_value": 8, "shoot_interval": 6, "icon": "up_attack_speed_damage.png"}}
+},
+
+"Gangsta Shroom" : {
+    "base" : {"attack_value": 16, "range": 1, "cost": 200, "shoot_interval": 20},
+
+    "0": {  "path_idea" : "high attack speed & range",
+        "1" : {"upgrade_cost": 125, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "2" : {"upgrade_cost": 200, "range": 1.15, "icon": "up_range.png"},
+        "3" : {"upgrade_cost": 250, "shoot_interval": 3, "icon": "up_speed_attack.png"},
+        "4" : {"upgrade_cost": 275, "range": 1.2, "icon": "up_range_2.png"},
+        "5" : {"upgrade_cost": 350, "attack_value": -4, "shoot_interval": 5, "icon": "up_speed_attack_down_damage.png"}},
+
+    "1": {  "path_idea" : "high damage & range",
+        "1" : {"upgrade_cost": 175, "attack_value": 4, "icon": "up_damage.png"},
+        "2" : {"upgrade_cost": 225, "range": 1.15, "icon": "up_range.png"},
+        "3" : {"upgrade_cost": 275, "attack_value": 8, "icon": "up_damage_2.png"},
+        "4" : {"upgrade_cost": 325, "range": 1.2, "icon": "up_range_2.png"},
+        "5" : {"upgrade_cost": 400, "attack_value": 12, "icon": "up_damage_3.png"}}
+},
+
+"Random Shroom" : {
+    "base" : {"attack_value": 7, "range": 1, "cost": 175, "shoot_interval": 30},
+
+    "0": {  "path_idea" : "high damage but big range between max and min",
+        "1" : {"upgrade_cost": 175, "attack_value": 1, "icon": "up_random_damage.png"},
+        "2" : {"upgrade_cost": 200, "attack_value": 2, "icon": "up_random_damage.png"},
+        "3" : {"upgrade_cost": 250, "attack_value": 4, "icon": "up_random_damage.png"},
+        "4" : {"upgrade_cost": 300, "attack_value": 5, "icon": "up_random_damage_2.png"},
+        "5" : {"upgrade_cost": 375, "attack_value": 6, "icon": "up_random_damage_2.png"}},
+
+    "1": {  "path_idea" : "high attack speed but lower damage",
+        "1" : {"upgrade_cost": 180, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "2" : {"upgrade_cost": 200, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "3" : {"upgrade_cost": 220, "shoot_interval": 3, "icon": "up_speed_attack.png"},
+        "4" : {"upgrade_cost": 275, "shoot_interval": 3, "icon": "up_speed_attack.png"},
+        "5" : {"upgrade_cost": 350, "shoot_interval": 5, "icon": "up_speed_attack_2.png"}}
+},
+
+"Spirit Shroom" : {
+    "base" : {"attack_value": 48, "range": 1, "cost": 500, "projectile_speed": 15},
+
+    "0": {  "path_idea" : "high projectile speed & range",
+        "1" : {"upgrade_cost": 300, "projectile_speed": 5, "icon": "up_projectile_speed.png"},
+        "2" : {"upgrade_cost": 350, "range": 1.1, "icon": "up_range.png"},
+        "3" : {"upgrade_cost": 425, "projectile_speed": 10, "icon": "up_projectile_speed_2.png"},
+        "4" : {"upgrade_cost": 475, "range": 1.3, "icon": "up_range_2.png"},
+        "5" : {"upgrade_cost": 500, "projectile_speed": 10, "icon": "up_projectile_speed_2.png"}},
+
+    "1": {  "path_idea" : "high damage",
+        "1" : {"upgrade_cost": 325, "attack_value": 4, "icon": "up_damage.png"},
+        "2" : {"upgrade_cost": 350, "attack_value": 8, "icon": "up_damage.png"},
+        "3" : {"upgrade_cost": 450, "attack_value": 10, "icon": "up_damage_2.png"},
+        "4" : {"upgrade_cost": 500, "attack_value": 12, "icon": "up_damage_2.png"},
+        "5" : {"upgrade_cost": 525, "attack_value": 14, "icon": "up_damage_3.png"}}
+},
+
+"Lilypad Shroom" : {
+    "base": {"attack_value": 32, "range": 1, "cost": 150, "shoot_interval": 30},
+
+    "0": {  "path_idea" : "higher range & damage",
+        "1": {"upgrade_cost": 150, "attack_value": 4, "icon": "up_damage.png"},
+        "2": {"upgrade_cost": 200, "range": 1.1, "icon": "up_range.png"},
+        "3": {"upgrade_cost": 250, "attack_value": 8, "icon": "up_damage.png"},
+        "4": {"upgrade_cost": 300, "range": 1.2, "icon": "up_range_2.png"},
+        "5": {"upgrade_cost": 375, "attack_value": 12, "range": 1.15, "icon": "up_range_damage_2.png"}},
+
+    "1": {  "path_idea" : "high attack speed",
+        "1": {"upgrade_cost": 150, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "2": {"upgrade_cost": 180, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "3": {"upgrade_cost": 200, "shoot_interval": 3, "icon": "up_speed_attack.png"},
+        "4": {"upgrade_cost": 250, "shoot_interval": 4, "icon": "up_speed_attack.png"},
+        "5": {"upgrade_cost": 350, "shoot_interval": 4, "icon": "up_speed_attack.png"}}
+},
+
+"Urchin Shroom" : {
+    "base": {"attack_value": 40, "range": 1, "cost": 250, "shoot_interval": 30},
+
+    "0": {  "path_idea" : "high range but lower attack speed",
+        "1": {"upgrade_cost": 250, "range": 1.1, "icon": "up_range.png"},
+        "2": {"upgrade_cost": 280, "range": 1.1, "icon": "up_range.png"},
+        "3": {"upgrade_cost": 325, "range": 1.15, "icon": "up_range.png"},
+        "4": {"upgrade_cost": 350, "range": 1.2, "shoot_interval": -5, "icon": "up_range_2_down_speed_attack.png"},
+        "5": {"upgrade_cost": 400, "range": 1.25, "shoot_interval": -10, "icon": "up_range_3_down_speed_attack_2.png"}},
+
+    "1": {  "path_idea" : "higher damage but slightly lower range",
+        "1": {"upgrade_cost": 250, "attack_value": 4, "icon": "up_damage.png"},
+        "2": {"upgrade_cost": 300, "attack_value": 4, "icon": "up_damage.png"},
+        "3": {"upgrade_cost": 350, "attack_value": 6, "icon": "up_damage.png"},
+        "4": {"upgrade_cost": 400, "attack_value": 12, "range": 0.9, "icon": "up_damage_2_down_range.png"},
+        "5": {"upgrade_cost": 450, "attack_value": 14, "range": 0.9, "icon": "up_damage_2_down_range.png"}}
+},
+
+"Algae Shroom" : {
+    "base" : {"attack_value": 32, "range": 1, "cost": 150, "shoot_interval": 30, "resistance_modifier": 1},
+
+    "0": {  "path_idea" : "Very high range & fast attack speed",
+        "1" : {"upgrade_cost": 115, "shoot_interval": 2, "icon": "up_speed_attack.png"},
+        "2" : {"upgrade_cost": 165, "range": 1.1, "icon": "up_range.png"},
+        "3" : {"upgrade_cost": 220, "shoot_interval": 6, "icon": "up_speed_attack.png"},
+        "4" : {"upgrade_cost": 300, "range": 1.25, "icon": "up_range_2.png"},
+        "5" : {"upgrade_cost": 350, "shoot_interval": 7, "icon": "up_speed_attack_2.png"}},
+
+    "1": {  "path_idea" : "high damage & resistance reduction",
+        "1" : {"upgrade_cost": 115, "attack_value": 2, "icon": "up_damage.png"},
+        "2" : {"upgrade_cost": 165, "attack_value": 3, "icon": "up_damage.png"},
+        "3" : {"upgrade_cost": 275, "attack_value": 5, "resistance_modifier": 0.75, "icon": "up_physical_resistance_damage.png"},
+        "4" : {"upgrade_cost": 350, "attack_value": 8, "resistance_modifier": 0.66, "icon": "up_physical_resistance_damage.png"},
+        "5" : {"upgrade_cost": 450, "attack_value": 10, "resistance_modifier": 0.5, "icon": "up_physical_resistance_damage.png"}}
+},
+
+"Water Strider Shroom" : {
+    "base" : {"attack_value": 24, "range": 1, "cost": 225, "shoot_interval": 25, "speed_modifier": 0.75},
+
+    "0": {  "path_idea" : "huge speed modifier but a lot lower damage & attack speed",
+        "1" : {"upgrade_cost": 175, "speed_modifier": 0.09, "icon": "up_slow_modifier.png"},
+        "2" : {"upgrade_cost": 225, "range": 1.1, "icon": "up_range.png"},
+        "3" : {"upgrade_cost": 250, "shoot_interval": -10, "speed_modifier": 0.16, "icon": "up_slow_modifier_2_down_speed_attack_2.png"},
+        "4" : {"upgrade_cost": 275, "range": 1.2, "icon": "up_range_2.png"},
+        "5" : {"upgrade_cost": 300, "attack_value": -8, "speed_modifier": 0.17, "icon": "up_slow_modifier_2_down_damage_2.png"}},
+
+    "1": {  "path_idea" : "higher damage & range & attack speed but lower speed modifier",
+        "1" : {"upgrade_cost": 175, "attack_value": 8, "speed_modifier": -0.09, "icon": "up_damage_down_slow_modifier.png"},
+        "2" : {"upgrade_cost": 250, "shoot_interval": 5, "icon": "up_speed_attack.png"},
+        "3" : {"upgrade_cost": 300, "shoot_interval": 10, "speed_modifier": -0.10, "icon": "up_speed_attack_2_down_slow_modifier_2.png"},
+        "4" : {"upgrade_cost": 325, "range": 1.2, "icon": "up_range_2.png"},
+        "5" : {"upgrade_cost": 350, "attack_value": 12, "speed_modifier": -0.15, "icon": "up_damage_2_down_slow_modifier_2.png"}}
+}
+}

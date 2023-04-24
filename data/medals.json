@@ -1,0 +1,32 @@
+{
+    "meadow": {
+        "easy": false,
+        "medium": false,
+        "hard": false
+    },
+    "snow": {
+        "easy": false,
+        "medium": false,
+        "hard": false
+    },
+    "beach": {
+        "easy": false,
+        "medium": false,
+        "hard": false
+    },
+    "floating_islands": {
+        "easy": false,
+        "medium": false,
+        "hard": false
+    },
+    "swamp": {
+        "easy": false,
+        "medium": false,
+        "hard": false
+    },
+    "islands": {
+        "easy": false,
+        "medium": false,
+        "hard": false
+    }
+}
