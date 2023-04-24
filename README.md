@@ -4,6 +4,8 @@ Shroom TD is a Tower Defense game developed entirely in python using pygame.
 The goal is to place towers (mushrooms) in order to prevent ennemies (slimes) to reach the end of the path,
 And to make it throught all the waves
 
+This project uses musics from Waterflame who owns all rights on these musics
+
 
 ## Table of Contents
 
