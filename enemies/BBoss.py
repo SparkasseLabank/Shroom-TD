@@ -19,8 +19,8 @@ class Bboss(Enemy):
             pygame.image.load(self.image_path), (self.width, self.height)), "RGBA")
         self.health = 250
         self.max_health = 250
-        self.bouclier = 25
-        self.max_bouclier = 25
+        self.bouclier = 50
+        self.max_bouclier = 50
         self.resistance = {
             "Magic": 12,
             "Physical": 4,
