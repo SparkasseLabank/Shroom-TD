@@ -1,0 +1,1462 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>ShroomTD.core.Game API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>ShroomTD.core.Game</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import pygame
+import os
+import copy
+import json
+import towers
+from core.Map import Map
+from core.generateur_wave import wave
+from menus.Escape_menu import Escape_menu
+from menus.Menu_bar import Menu_bar
+from menus.Upgrade_menu import Upgrade_menu
+from menus.Game_over_menu import Game_over_menu
+from effects.effets import fondu_fermer
+from effects.sound import play_sound, play_music, stop_music
+
+from enemies.Bslime import Bslime
+from enemies.Gslime import Gslime
+from enemies.Oslime import Oslime
+from enemies.Wslime import Wslime
+from enemies.GOslime import GOslime
+from enemies.Yslime import Yslime
+from enemies.Pslime import Pslime
+from enemies.Rslime import Rslime
+from enemies.Cslime import Cslime
+from enemies.GYslime import GYslime
+from enemies.Vslime import Vslime
+from enemies.BBoss import Bboss
+from enemies.GBoss import Gboss
+from enemies.WBoss import Wboss
+
+class Game:
+    def __init__(self, menu, nom_map:str, difficulty:str) -&gt; None:
+        &#34;&#34;&#34;Classe représentant une partie
+
+        - menu: objet menu permettant d&#39;y retourner après la partie
+        
+        - nom_map: chaine de caractères permettant de connaître la 
+        map choisie par le joueur
+        
+        - difficulty: chaine de caractères correspondant a un fichier json qui
+        sera choisi pour les prix des tours et des upgrades&#34;&#34;&#34;
+
+        self.fps = 60
+        self.clock = pygame.time.Clock()
+        self.window = pygame.display.set_mode(flags=pygame.FULLSCREEN | pygame.DOUBLEBUF)
+        self.width = self.window.get_width()
+        self.height = self.window.get_height()
+        self.enemies = []
+        self.towers = []
+        self.projectiles = []
+        self.selected_tower = None
+        self.upgrade_menu = None
+        self.health = 50
+        self.money = 250
+        self.current_wave = 0
+        self.enemy_index = 0
+        self.time_since_last_enemy = 0
+        self.wave_running = False
+        self.available_wave = True
+        self.menu = menu
+        self.tower_on_cursor = None
+        self.difficulty = difficulty
+        if self.difficulty == &#34;easy_upgrades.json&#34;:
+            self.last_wave = 50
+        elif self.difficulty == &#34;medium_upgrades.json&#34;:
+            self.last_wave = 75
+        else:
+            self.last_wave = 100
+        self.menu_bar = Menu_bar((self.width, self.height), self.health, self.money, self.current_wave, self.difficulty, self.last_wave)
+        self.current_tick = 0
+        self.map = None
+        self.nom_map = nom_map
+        self.map = Map(nom_map, (self.width, self.height))
+        self.convert_waves = {
+            &#34;blue_slime&#34;: Bslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;green_slime&#34;: Gslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;orange_slime&#34;: Oslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;white_slime&#34;: Wslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;golden_slime&#34;: GOslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+
+            &#34;yellow_slime&#34;: Yslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;pink_slime&#34;: Pslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;cyan_slime&#34;: Cslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;red_slime&#34;: Rslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;grey_slime&#34;: GYslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;violet_slime&#34; :Vslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            
+            &#34;Boss_blue&#34;: Bboss(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;Boss_green&#34;: Gboss(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;Boss_white&#34;: Wboss(self.map.start[0], self.map.start[1], (self.width, self.height))
+        }
+
+        self.escape_menu = Escape_menu((self.width, self.height), self.map.music)
+        play_music(self.map.music, self.escape_menu.music_state)
+
+    
+    def run(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour lancer, faire tourner le jeu
+        Cette méthode comprends:
+        - La gestion des ennemis/vagues et ses boutons
+        - La gestion des clics à l&#39;aide de la méthode handle_clicks()
+        - La gestion de fin de jeu
+        - La gestion de tirs des tours et projectiles
+        - L&#39;affichage de tous les éléments graphiques de la partie&#34;&#34;&#34;
+
+        menu = self.menu
+
+        running = 1
+        while running:
+            self.clock.tick(self.fps)
+            self.current_tick += 1
+            
+            #Trier la liste des ennemis pour que les tours tirent sur le dernier ennemi
+            self.enemies.sort(key=lambda enemy: enemy.distance_travelled, reverse=True)
+            
+            #Remettre le bouton en vert à la fin des vagues
+            if not self.available_wave:
+                if not self.enemies and not self.wave_running:
+                    self.available_wave = True
+
+            for event in pygame.event.get():
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    #Clic gauche
+                    if event.button == 1:
+                        self.handle_clicks()
+                
+                    #Clic droit
+                    elif event.button == 3:
+                        self.selected_tower = None
+                
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        running = self.escape_menu.draw_menu(self)
+
+                    if event.key == pygame.K_F4:
+                        key = pygame.key.get_pressed()
+                        if key[pygame.K_LALT]:
+                            exit()
+            
+            if self.health &lt;= 0:
+                running = self.game_over()
+            
+            if self.current_wave == self.last_wave and self.available_wave == True:
+                running = self.win()
+
+            #Gerer les ennemis
+            if self.enemies:
+                for enemy in self.enemies:
+                    enemy.check_status()
+                    enemy.where_to_go(self.map.path)
+                    enemy.bar_switch()
+                    
+                    if enemy.is_out(self.map.path[len(self.map.path)-1]):
+                        self.enemies.remove(enemy)
+                        self.health -= enemy.damage
+                        del enemy
+
+                    elif enemy.is_dead():
+                        play_sound([&#34;mort1.ogg&#34;, &#34;mort2.ogg&#34;, &#34;mort3.ogg&#34;, &#34;mort4.ogg&#34;, &#34;mort5.ogg&#34;], 0.3, self.escape_menu.sfx_state)
+                        self.enemies.remove(enemy)
+                        self.money += enemy.money_value
+                        del enemy
+
+            #Tir des tours
+            if self.towers:
+                for tower in self.towers:
+                    if self.enemies:
+
+                        targetable_enemies = []
+                        for enemy in self.enemies:
+                            if tower.can_shoot(enemy):
+                                targetable_enemies.append(enemy)
+                        if targetable_enemies != []:
+                            if tower.name == &#34;Gangsta Shroom&#34; or tower.name == &#34;Random Shroom&#34; or tower.name == &#34;Stun Shroom&#34; or tower.name == &#34;Urchin Shroom&#34;:
+                                tower.main_attack(target=None, enemies=targetable_enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                            elif tower.name == &#34;Spirit Shroom&#34;:
+                                tower.main_attack(target=targetable_enemies[len(targetable_enemies)//2], enemies=targetable_enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                            else:
+                                tower.main_attack(target=targetable_enemies[0], enemies=self.enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                        elif tower.name == &#34;Spirit Shroom&#34;:
+                            tower.reset_sprite()
+                    elif tower.name == &#34;Spirit Shroom&#34;:
+                            tower.reset_sprite()
+
+            if self.projectiles:
+                for projectile in self.projectiles:
+                    self.projectiles = projectile.handle(self.projectiles)
+
+            if self.wave_running:
+                self.run_wave()
+            
+            if self.upgrade_menu is not None and self.selected_tower is not None:
+                if self.selected_tower.level[0] != &#34;max&#34; and self.selected_tower.level[1] != &#34;max&#34;:
+                    self.upgrade_menu.first_upgrade_available = self.money &gt;= self.selected_tower.upgrades[self.selected_tower.name][&#34;0&#34;][str(self.selected_tower.level[0]+1)][&#34;upgrade_cost&#34;]
+                    self.upgrade_menu.second_upgrade_available = self.money &gt;= self.selected_tower.upgrades[self.selected_tower.name][&#34;1&#34;][str(self.selected_tower.level[1]+1)][&#34;upgrade_cost&#34;]
+
+            self.draw_window()
+            pygame.display.flip()
+
+        stop_music(self.map.music)
+        fondu_fermer(self.window, (self.width, self.height), 0.5, 50)
+        del self
+        menu.run()
+    
+    def draw_window(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour dessiner, actualiser la fenêtre
+        (Map, ennemis, tours, projectiles, tour séléctionnée,
+        barre en haut de l&#39;écran et menu d&#39;amélioration)&#34;&#34;&#34;
+
+        self.window.blit(self.map.bg, (0, self.menu_bar.menu_bar_rect.get_height()))
+
+        for enemy in self.enemies:
+            enemy.draw(self.window)
+
+        for tower in self.towers:
+            tower.draw(self.window)
+        
+        for projectile in self.projectiles:
+            projectile.draw(self.window)
+        
+        if self.selected_tower != None:
+            self.window.blit(self.selected_tower.range_circle, (self.selected_tower.x + self.selected_tower.width//2 - self.selected_tower.range,
+                                      self.selected_tower.y + self.selected_tower.height//2 - self.selected_tower.range))
+            self.window.blit(self.selected_tower.image, (self.selected_tower.x, self.selected_tower.y))
+
+        self.menu_bar.update_texts(self.health, self.money, self.current_wave)
+        self.menu_bar.draw(self.window, (self.width, self.height))
+        self.draw_upgrade_menu()
+
+        if self.available_wave:
+            self.menu_bar.start_wave_button.draw_and_scale(self.window)
+        else:
+            self.window.blit(self.menu_bar.unavailable_button, (self.menu_bar.start_wave_button.x, self.menu_bar.start_wave_button.y))
+        
+        if self.fps == 60:
+            self.menu_bar.accelerate_off_button.draw_and_scale(self.window)
+        else:
+            self.menu_bar.accelerate_on_button.draw_and_scale(self.window)
+
+    def draw_upgrade_menu(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour dessiner le menu d&#39;amélioration
+        On utilise ici la classe Upgrade_menu ainsi que sa méthode draw&#34;&#34;&#34;
+
+        if self.selected_tower is not None:
+            if self.upgrade_menu is None:
+                self.upgrade_menu = Upgrade_menu(self.selected_tower, (self.width, self.height))
+
+            self.upgrade_menu.draw(self.window, self.money)
+
+        else:
+            self.upgrade_menu = None
+            
+    def start_wave(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour lancer une vague&#34;&#34;&#34;
+
+        if not self.wave_running and not self.enemies:
+            self.wave_running = True
+            self.available_wave = False
+            self.current_wave += 1
+
+    def run_wave(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour envoyer les ennemis de la vague lancée&#34;&#34;&#34;
+        
+        if self.current_tick - self.time_since_last_enemy &gt;= wave(self.current_wave)[self.enemy_index][1]:
+            if self.current_wave != 101: 
+                self.enemies.append(copy.deepcopy(self.convert_waves[wave(self.current_wave)[self.enemy_index][0]]))
+                self.time_since_last_enemy = self.current_tick
+                self.enemy_index += 1
+                if self.enemy_index == len(wave(self.current_wave)):
+                    self.wave_running = False
+                    self.enemy_index = 0
+            else:
+                pass
+
+    def select_placement(self, placement_type:str):
+        &#34;&#34;&#34;Méthode pour permettre au joueur de choisir l&#39;emplacement de sa nouvelle tour:
+
+        Elle affiche les emplacements disponibles pour la tour séléctionnée et la dessine sur le curseur
+        lorsqu&#39;un clic est effectué sur un emplacement, la tour se place et l&#39;emplacement n&#39;est plus libre
+
+        - placement_type: chaine de caractères précisant le type d&#39;emplacement (Terre ou eau)&#34;&#34;&#34;
+
+        selected_square = []
+        place_circle = pygame.transform.scale(pygame.image.load(os.path.join(&#34;assets&#34;, &#34;other&#34;, &#34;emplacement.png&#34;)).convert_alpha(), (self.width/38.4, self.height/21.6))
+
+        while selected_square == []:
+            self.draw_window()
+
+            if placement_type == &#34;Ground&#34; and self.map.tower_places != [[]]:
+                for place in self.map.tower_places:
+                    if self.nom_map == &#34;prairie&#34;:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/3.2, place[1]+self.map.unit/3.2))
+                    else:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/6.4, place[1]+self.map.unit/6.4))
+
+            elif placement_type == &#34;Water&#34; and self.map.water_places != [[]]:
+                for place in self.map.water_places:
+                    if self.nom_map == &#34;prairie&#34;:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/3.2, place[1]+self.map.unit/3.2))
+                    else:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/6.4, place[1]+self.map.unit/6.4))
+
+            for available_tower in self.menu_bar.tower_buttons:
+                if self.tower_on_cursor == available_tower.name:
+                    circle = pygame.Surface((available_tower.assigned_tower.range*2, available_tower.assigned_tower.range*2), pygame.SRCALPHA).convert_alpha()
+                    pygame.draw.circle(circle, (50,50,50,128), (available_tower.assigned_tower.range,available_tower.assigned_tower.range),available_tower.assigned_tower.range)
+                    self.window.blit(circle, (pygame.mouse.get_pos()[0]-circle.get_width()/2, pygame.mouse.get_pos()[1]-circle.get_height()/2))
+                    self.window.blit(available_tower.sprite, (pygame.mouse.get_pos()[0]-available_tower.width/2, pygame.mouse.get_pos()[1]-available_tower.height/2))
+
+            pygame.display.flip()
+
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        selected_square = None
+
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
+                    selected_square = None
+
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:        
+                    mouse = pygame.mouse.get_pos()
+                    if placement_type == &#34;Ground&#34; and self.map.tower_places != [[]]:
+                        for place in self.map.tower_places:
+                            if place[0] &lt;= mouse[0] &lt;= place[0]+self.map.unitL and place[1] &lt;= mouse[1] &lt;= place[1]+self.map.unit:
+                                selected_square = place
+
+                    elif placement_type == &#34;Water&#34; and self.map.water_places != [[]]:
+                        for place in self.map.water_places:
+                            if place[0] &lt;= mouse[0] &lt;= place[0]+self.map.unitL and place[1] &lt;= mouse[1] &lt;= place[1]+self.map.unit:
+                                selected_square = place
+    
+        return selected_square
+    
+    def handle_clicks(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour gérer les clics efféctués par le joueur
+        (Boutons de vague, accélération, amélioration, vente
+        (gère aussi la libération des emplacements lors de la vente) et selection de tour)&#34;&#34;&#34;
+
+        if self.upgrade_menu is None:
+            for available_tower in self.menu_bar.tower_buttons:
+                self.buy_tower(available_tower)
+
+        elif self.upgrade_menu.first_upgrade_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.money = self.selected_tower.upgrade(self.money, self.escape_menu.sfx_state, 0)
+            self.upgrade_menu.update(self.selected_tower)
+        
+        elif self.upgrade_menu.second_upgrade_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.money = self.selected_tower.upgrade(self.money, self.escape_menu.sfx_state, 1)
+            self.upgrade_menu.update(self.selected_tower)
+
+        elif self.upgrade_menu.sell_button.rect.collidepoint(pygame.mouse.get_pos()):
+            play_sound(&#34;money.ogg&#34;, 0.3, self.escape_menu.sfx_state)
+
+            if self.selected_tower.placement_type == &#34;Ground&#34;:
+                self.money = self.selected_tower.sell(self.money, self.towers, self.map.tower_places)
+
+            elif self.selected_tower.placement_type == &#34;Water&#34;:
+                self.money = self.selected_tower.sell(self.money, self.towers, self.map.water_places)
+
+            self.selected_tower = None
+
+        if self.menu_bar.start_wave_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.start_wave()
+
+        #Détecte si une tour à été cliqué, si oui la selectionne
+        else: 
+            for tower in self.towers:
+                if tower.rect.collidepoint(pygame.mouse.get_pos()):
+                    self.selected_tower = tower
+                    if self.upgrade_menu is not None:
+                        self.upgrade_menu.update(self.selected_tower)
+        
+        for tower in self.towers:
+            if tower.rect.collidepoint(pygame.mouse.get_pos()):
+                self.selected_tower = tower
+        
+        if self.fps == 60:
+            if self.menu_bar.accelerate_off_button.rect.collidepoint(pygame.mouse.get_pos()):
+                self.fps = 120
+        else:
+            if self.menu_bar.accelerate_on_button.rect.collidepoint(pygame.mouse.get_pos()):
+                self.fps = 60
+
+    def buy_tower(self, element) -&gt; None:
+        &#34;&#34;&#34;Méthode pour permettre au joueur d&#39;acheter une tour si il clique sur un bouton:
+
+        Vérifie si le joueur a assez d&#39;argent et enlève l&#39;emplacement de la liste des
+        emplacements libres au moment de l&#39;achat
+
+        - element: Bouton d&#39;achat de tour (menu d&#39;achat en haut de l&#39;écran)&#34;&#34;&#34;
+
+        if element.rect.collidepoint(pygame.mouse.get_pos()):
+            if self.money &gt;= element.assigned_tower.cost and self.map.tower_places:
+                self.tower_on_cursor = element.name
+                self.selected_tower = None
+                placement = self.select_placement(element.placement_type)
+                if placement is not None:
+                    if element.name == &#34;Cshroom&#34;:
+                        self.towers.append(towers.Cshroom.Cshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Sshroom&#34;:
+                        self.towers.append(towers.Sshroom.Sshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;SNshroom&#34;:
+                        self.towers.append(towers.SNshroom.SNshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Bshroom&#34;:
+                        self.towers.append(towers.Bshroom.Bshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Wshroom&#34;:
+                        self.towers.append(towers.Wshroom.Wshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Gshroom&#34;:
+                        self.towers.append(towers.Gshroom.Gshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Rshroom&#34;:
+                        self.towers.append(towers.Rshroom.Rshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;SPshroom&#34;:
+                        self.towers.append(towers.SPshroom.SPshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;LPshroom&#34;:
+                        self.towers.append(towers.LPshroom.LPshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Ushroom&#34;:
+                        self.towers.append(towers.Ushroom.Ushroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Ashroom&#34;:
+                        self.towers.append(towers.Ashroom.Ashroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;WSshroom&#34;:
+                        self.towers.append(towers.WSshroom.WSshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+
+                    if element.placement_type == &#34;Ground&#34;:
+                        self.map.tower_places.remove(placement)
+                    elif element.placement_type == &#34;Water&#34;:
+                        self.map.water_places.remove(placement)
+                    self.money -= element.assigned_tower.cost
+
+    def game_over(self) -&gt; bool:
+        &#34;&#34;&#34;Méthode créant le menu de fin de partie et renvoyant un booléen décidant
+        si la partie se relance ou si le joueur revient au menu principal&#34;&#34;&#34;
+
+        stop_music(self.map.music)
+        menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state, &#34;Dommage ! Tu as perdu !&#34;, (self.width/2.8, self.height/2.5))
+        return menu.draw(self)
+
+    def win(self) -&gt; bool:
+        &#34;&#34;&#34;Méthode créant le menu de fin de partie et ajoutant la médaille associée
+        à la difficulté de la partie gagnée, la méthode renvoie un booléen décidant
+        si la partie se relance ou si le joueur revient au menu principal&#34;&#34;&#34;
+
+        stop_music(self.map.music)
+
+        with open(os.path.join(&#34;data&#34;, &#34;medals.json&#34;), &#34;r&#34;) as medals_file:
+            medals = json.load(medals_file)
+            medals[self.nom_map][self.difficulty.replace(&#34;_upgrades.json&#34;, &#34;&#34;)] = True
+
+        with open(os.path.join(&#34;data&#34;, &#34;medals.json&#34;), &#34;w&#34;) as medals_file:
+            json.dump(medals, medals_file, indent=4)
+
+        menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state, &#34;Félicitations ! Tu as gagné !&#34;, (self.width/2.95, self.height/2.5))
+        return menu.draw(self)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="ShroomTD.core.Game.Game"><code class="flex name class">
+<span>class <span class="ident">Game</span></span>
+<span>(</span><span>menu, nom_map: str, difficulty: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Classe représentant une partie</p>
+<ul>
+<li>
+<p>menu: objet menu permettant d'y retourner après la partie</p>
+</li>
+<li>
+<p>nom_map: chaine de caractères permettant de connaître la
+map choisie par le joueur</p>
+</li>
+<li>
+<p>difficulty: chaine de caractères correspondant a un fichier json qui
+sera choisi pour les prix des tours et des upgrades</p>
+</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Game:
+    def __init__(self, menu, nom_map:str, difficulty:str) -&gt; None:
+        &#34;&#34;&#34;Classe représentant une partie
+
+        - menu: objet menu permettant d&#39;y retourner après la partie
+        
+        - nom_map: chaine de caractères permettant de connaître la 
+        map choisie par le joueur
+        
+        - difficulty: chaine de caractères correspondant a un fichier json qui
+        sera choisi pour les prix des tours et des upgrades&#34;&#34;&#34;
+
+        self.fps = 60
+        self.clock = pygame.time.Clock()
+        self.window = pygame.display.set_mode(flags=pygame.FULLSCREEN | pygame.DOUBLEBUF)
+        self.width = self.window.get_width()
+        self.height = self.window.get_height()
+        self.enemies = []
+        self.towers = []
+        self.projectiles = []
+        self.selected_tower = None
+        self.upgrade_menu = None
+        self.health = 50
+        self.money = 250
+        self.current_wave = 0
+        self.enemy_index = 0
+        self.time_since_last_enemy = 0
+        self.wave_running = False
+        self.available_wave = True
+        self.menu = menu
+        self.tower_on_cursor = None
+        self.difficulty = difficulty
+        if self.difficulty == &#34;easy_upgrades.json&#34;:
+            self.last_wave = 50
+        elif self.difficulty == &#34;medium_upgrades.json&#34;:
+            self.last_wave = 75
+        else:
+            self.last_wave = 100
+        self.menu_bar = Menu_bar((self.width, self.height), self.health, self.money, self.current_wave, self.difficulty, self.last_wave)
+        self.current_tick = 0
+        self.map = None
+        self.nom_map = nom_map
+        self.map = Map(nom_map, (self.width, self.height))
+        self.convert_waves = {
+            &#34;blue_slime&#34;: Bslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;green_slime&#34;: Gslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;orange_slime&#34;: Oslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;white_slime&#34;: Wslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;golden_slime&#34;: GOslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+
+            &#34;yellow_slime&#34;: Yslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;pink_slime&#34;: Pslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;cyan_slime&#34;: Cslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;red_slime&#34;: Rslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;grey_slime&#34;: GYslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;violet_slime&#34; :Vslime(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            
+            &#34;Boss_blue&#34;: Bboss(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;Boss_green&#34;: Gboss(self.map.start[0], self.map.start[1], (self.width, self.height)),
+            &#34;Boss_white&#34;: Wboss(self.map.start[0], self.map.start[1], (self.width, self.height))
+        }
+
+        self.escape_menu = Escape_menu((self.width, self.height), self.map.music)
+        play_music(self.map.music, self.escape_menu.music_state)
+
+    
+    def run(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour lancer, faire tourner le jeu
+        Cette méthode comprends:
+        - La gestion des ennemis/vagues et ses boutons
+        - La gestion des clics à l&#39;aide de la méthode handle_clicks()
+        - La gestion de fin de jeu
+        - La gestion de tirs des tours et projectiles
+        - L&#39;affichage de tous les éléments graphiques de la partie&#34;&#34;&#34;
+
+        menu = self.menu
+
+        running = 1
+        while running:
+            self.clock.tick(self.fps)
+            self.current_tick += 1
+            
+            #Trier la liste des ennemis pour que les tours tirent sur le dernier ennemi
+            self.enemies.sort(key=lambda enemy: enemy.distance_travelled, reverse=True)
+            
+            #Remettre le bouton en vert à la fin des vagues
+            if not self.available_wave:
+                if not self.enemies and not self.wave_running:
+                    self.available_wave = True
+
+            for event in pygame.event.get():
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    #Clic gauche
+                    if event.button == 1:
+                        self.handle_clicks()
+                
+                    #Clic droit
+                    elif event.button == 3:
+                        self.selected_tower = None
+                
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        running = self.escape_menu.draw_menu(self)
+
+                    if event.key == pygame.K_F4:
+                        key = pygame.key.get_pressed()
+                        if key[pygame.K_LALT]:
+                            exit()
+            
+            if self.health &lt;= 0:
+                running = self.game_over()
+            
+            if self.current_wave == self.last_wave and self.available_wave == True:
+                running = self.win()
+
+            #Gerer les ennemis
+            if self.enemies:
+                for enemy in self.enemies:
+                    enemy.check_status()
+                    enemy.where_to_go(self.map.path)
+                    enemy.bar_switch()
+                    
+                    if enemy.is_out(self.map.path[len(self.map.path)-1]):
+                        self.enemies.remove(enemy)
+                        self.health -= enemy.damage
+                        del enemy
+
+                    elif enemy.is_dead():
+                        play_sound([&#34;mort1.ogg&#34;, &#34;mort2.ogg&#34;, &#34;mort3.ogg&#34;, &#34;mort4.ogg&#34;, &#34;mort5.ogg&#34;], 0.3, self.escape_menu.sfx_state)
+                        self.enemies.remove(enemy)
+                        self.money += enemy.money_value
+                        del enemy
+
+            #Tir des tours
+            if self.towers:
+                for tower in self.towers:
+                    if self.enemies:
+
+                        targetable_enemies = []
+                        for enemy in self.enemies:
+                            if tower.can_shoot(enemy):
+                                targetable_enemies.append(enemy)
+                        if targetable_enemies != []:
+                            if tower.name == &#34;Gangsta Shroom&#34; or tower.name == &#34;Random Shroom&#34; or tower.name == &#34;Stun Shroom&#34; or tower.name == &#34;Urchin Shroom&#34;:
+                                tower.main_attack(target=None, enemies=targetable_enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                            elif tower.name == &#34;Spirit Shroom&#34;:
+                                tower.main_attack(target=targetable_enemies[len(targetable_enemies)//2], enemies=targetable_enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                            else:
+                                tower.main_attack(target=targetable_enemies[0], enemies=self.enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                        elif tower.name == &#34;Spirit Shroom&#34;:
+                            tower.reset_sprite()
+                    elif tower.name == &#34;Spirit Shroom&#34;:
+                            tower.reset_sprite()
+
+            if self.projectiles:
+                for projectile in self.projectiles:
+                    self.projectiles = projectile.handle(self.projectiles)
+
+            if self.wave_running:
+                self.run_wave()
+            
+            if self.upgrade_menu is not None and self.selected_tower is not None:
+                if self.selected_tower.level[0] != &#34;max&#34; and self.selected_tower.level[1] != &#34;max&#34;:
+                    self.upgrade_menu.first_upgrade_available = self.money &gt;= self.selected_tower.upgrades[self.selected_tower.name][&#34;0&#34;][str(self.selected_tower.level[0]+1)][&#34;upgrade_cost&#34;]
+                    self.upgrade_menu.second_upgrade_available = self.money &gt;= self.selected_tower.upgrades[self.selected_tower.name][&#34;1&#34;][str(self.selected_tower.level[1]+1)][&#34;upgrade_cost&#34;]
+
+            self.draw_window()
+            pygame.display.flip()
+
+        stop_music(self.map.music)
+        fondu_fermer(self.window, (self.width, self.height), 0.5, 50)
+        del self
+        menu.run()
+    
+    def draw_window(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour dessiner, actualiser la fenêtre
+        (Map, ennemis, tours, projectiles, tour séléctionnée,
+        barre en haut de l&#39;écran et menu d&#39;amélioration)&#34;&#34;&#34;
+
+        self.window.blit(self.map.bg, (0, self.menu_bar.menu_bar_rect.get_height()))
+
+        for enemy in self.enemies:
+            enemy.draw(self.window)
+
+        for tower in self.towers:
+            tower.draw(self.window)
+        
+        for projectile in self.projectiles:
+            projectile.draw(self.window)
+        
+        if self.selected_tower != None:
+            self.window.blit(self.selected_tower.range_circle, (self.selected_tower.x + self.selected_tower.width//2 - self.selected_tower.range,
+                                      self.selected_tower.y + self.selected_tower.height//2 - self.selected_tower.range))
+            self.window.blit(self.selected_tower.image, (self.selected_tower.x, self.selected_tower.y))
+
+        self.menu_bar.update_texts(self.health, self.money, self.current_wave)
+        self.menu_bar.draw(self.window, (self.width, self.height))
+        self.draw_upgrade_menu()
+
+        if self.available_wave:
+            self.menu_bar.start_wave_button.draw_and_scale(self.window)
+        else:
+            self.window.blit(self.menu_bar.unavailable_button, (self.menu_bar.start_wave_button.x, self.menu_bar.start_wave_button.y))
+        
+        if self.fps == 60:
+            self.menu_bar.accelerate_off_button.draw_and_scale(self.window)
+        else:
+            self.menu_bar.accelerate_on_button.draw_and_scale(self.window)
+
+    def draw_upgrade_menu(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour dessiner le menu d&#39;amélioration
+        On utilise ici la classe Upgrade_menu ainsi que sa méthode draw&#34;&#34;&#34;
+
+        if self.selected_tower is not None:
+            if self.upgrade_menu is None:
+                self.upgrade_menu = Upgrade_menu(self.selected_tower, (self.width, self.height))
+
+            self.upgrade_menu.draw(self.window, self.money)
+
+        else:
+            self.upgrade_menu = None
+            
+    def start_wave(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour lancer une vague&#34;&#34;&#34;
+
+        if not self.wave_running and not self.enemies:
+            self.wave_running = True
+            self.available_wave = False
+            self.current_wave += 1
+
+    def run_wave(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour envoyer les ennemis de la vague lancée&#34;&#34;&#34;
+        
+        if self.current_tick - self.time_since_last_enemy &gt;= wave(self.current_wave)[self.enemy_index][1]:
+            if self.current_wave != 101: 
+                self.enemies.append(copy.deepcopy(self.convert_waves[wave(self.current_wave)[self.enemy_index][0]]))
+                self.time_since_last_enemy = self.current_tick
+                self.enemy_index += 1
+                if self.enemy_index == len(wave(self.current_wave)):
+                    self.wave_running = False
+                    self.enemy_index = 0
+            else:
+                pass
+
+    def select_placement(self, placement_type:str):
+        &#34;&#34;&#34;Méthode pour permettre au joueur de choisir l&#39;emplacement de sa nouvelle tour:
+
+        Elle affiche les emplacements disponibles pour la tour séléctionnée et la dessine sur le curseur
+        lorsqu&#39;un clic est effectué sur un emplacement, la tour se place et l&#39;emplacement n&#39;est plus libre
+
+        - placement_type: chaine de caractères précisant le type d&#39;emplacement (Terre ou eau)&#34;&#34;&#34;
+
+        selected_square = []
+        place_circle = pygame.transform.scale(pygame.image.load(os.path.join(&#34;assets&#34;, &#34;other&#34;, &#34;emplacement.png&#34;)).convert_alpha(), (self.width/38.4, self.height/21.6))
+
+        while selected_square == []:
+            self.draw_window()
+
+            if placement_type == &#34;Ground&#34; and self.map.tower_places != [[]]:
+                for place in self.map.tower_places:
+                    if self.nom_map == &#34;prairie&#34;:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/3.2, place[1]+self.map.unit/3.2))
+                    else:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/6.4, place[1]+self.map.unit/6.4))
+
+            elif placement_type == &#34;Water&#34; and self.map.water_places != [[]]:
+                for place in self.map.water_places:
+                    if self.nom_map == &#34;prairie&#34;:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/3.2, place[1]+self.map.unit/3.2))
+                    else:
+                        self.window.blit(place_circle, (place[0]+self.map.unitL/6.4, place[1]+self.map.unit/6.4))
+
+            for available_tower in self.menu_bar.tower_buttons:
+                if self.tower_on_cursor == available_tower.name:
+                    circle = pygame.Surface((available_tower.assigned_tower.range*2, available_tower.assigned_tower.range*2), pygame.SRCALPHA).convert_alpha()
+                    pygame.draw.circle(circle, (50,50,50,128), (available_tower.assigned_tower.range,available_tower.assigned_tower.range),available_tower.assigned_tower.range)
+                    self.window.blit(circle, (pygame.mouse.get_pos()[0]-circle.get_width()/2, pygame.mouse.get_pos()[1]-circle.get_height()/2))
+                    self.window.blit(available_tower.sprite, (pygame.mouse.get_pos()[0]-available_tower.width/2, pygame.mouse.get_pos()[1]-available_tower.height/2))
+
+            pygame.display.flip()
+
+            for event in pygame.event.get():
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_ESCAPE:
+                        selected_square = None
+
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
+                    selected_square = None
+
+                if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:        
+                    mouse = pygame.mouse.get_pos()
+                    if placement_type == &#34;Ground&#34; and self.map.tower_places != [[]]:
+                        for place in self.map.tower_places:
+                            if place[0] &lt;= mouse[0] &lt;= place[0]+self.map.unitL and place[1] &lt;= mouse[1] &lt;= place[1]+self.map.unit:
+                                selected_square = place
+
+                    elif placement_type == &#34;Water&#34; and self.map.water_places != [[]]:
+                        for place in self.map.water_places:
+                            if place[0] &lt;= mouse[0] &lt;= place[0]+self.map.unitL and place[1] &lt;= mouse[1] &lt;= place[1]+self.map.unit:
+                                selected_square = place
+    
+        return selected_square
+    
+    def handle_clicks(self) -&gt; None:
+        &#34;&#34;&#34;Méthode pour gérer les clics efféctués par le joueur
+        (Boutons de vague, accélération, amélioration, vente
+        (gère aussi la libération des emplacements lors de la vente) et selection de tour)&#34;&#34;&#34;
+
+        if self.upgrade_menu is None:
+            for available_tower in self.menu_bar.tower_buttons:
+                self.buy_tower(available_tower)
+
+        elif self.upgrade_menu.first_upgrade_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.money = self.selected_tower.upgrade(self.money, self.escape_menu.sfx_state, 0)
+            self.upgrade_menu.update(self.selected_tower)
+        
+        elif self.upgrade_menu.second_upgrade_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.money = self.selected_tower.upgrade(self.money, self.escape_menu.sfx_state, 1)
+            self.upgrade_menu.update(self.selected_tower)
+
+        elif self.upgrade_menu.sell_button.rect.collidepoint(pygame.mouse.get_pos()):
+            play_sound(&#34;money.ogg&#34;, 0.3, self.escape_menu.sfx_state)
+
+            if self.selected_tower.placement_type == &#34;Ground&#34;:
+                self.money = self.selected_tower.sell(self.money, self.towers, self.map.tower_places)
+
+            elif self.selected_tower.placement_type == &#34;Water&#34;:
+                self.money = self.selected_tower.sell(self.money, self.towers, self.map.water_places)
+
+            self.selected_tower = None
+
+        if self.menu_bar.start_wave_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.start_wave()
+
+        #Détecte si une tour à été cliqué, si oui la selectionne
+        else: 
+            for tower in self.towers:
+                if tower.rect.collidepoint(pygame.mouse.get_pos()):
+                    self.selected_tower = tower
+                    if self.upgrade_menu is not None:
+                        self.upgrade_menu.update(self.selected_tower)
+        
+        for tower in self.towers:
+            if tower.rect.collidepoint(pygame.mouse.get_pos()):
+                self.selected_tower = tower
+        
+        if self.fps == 60:
+            if self.menu_bar.accelerate_off_button.rect.collidepoint(pygame.mouse.get_pos()):
+                self.fps = 120
+        else:
+            if self.menu_bar.accelerate_on_button.rect.collidepoint(pygame.mouse.get_pos()):
+                self.fps = 60
+
+    def buy_tower(self, element) -&gt; None:
+        &#34;&#34;&#34;Méthode pour permettre au joueur d&#39;acheter une tour si il clique sur un bouton:
+
+        Vérifie si le joueur a assez d&#39;argent et enlève l&#39;emplacement de la liste des
+        emplacements libres au moment de l&#39;achat
+
+        - element: Bouton d&#39;achat de tour (menu d&#39;achat en haut de l&#39;écran)&#34;&#34;&#34;
+
+        if element.rect.collidepoint(pygame.mouse.get_pos()):
+            if self.money &gt;= element.assigned_tower.cost and self.map.tower_places:
+                self.tower_on_cursor = element.name
+                self.selected_tower = None
+                placement = self.select_placement(element.placement_type)
+                if placement is not None:
+                    if element.name == &#34;Cshroom&#34;:
+                        self.towers.append(towers.Cshroom.Cshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Sshroom&#34;:
+                        self.towers.append(towers.Sshroom.Sshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;SNshroom&#34;:
+                        self.towers.append(towers.SNshroom.SNshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Bshroom&#34;:
+                        self.towers.append(towers.Bshroom.Bshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Wshroom&#34;:
+                        self.towers.append(towers.Wshroom.Wshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Gshroom&#34;:
+                        self.towers.append(towers.Gshroom.Gshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Rshroom&#34;:
+                        self.towers.append(towers.Rshroom.Rshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;SPshroom&#34;:
+                        self.towers.append(towers.SPshroom.SPshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;LPshroom&#34;:
+                        self.towers.append(towers.LPshroom.LPshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Ushroom&#34;:
+                        self.towers.append(towers.Ushroom.Ushroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;Ashroom&#34;:
+                        self.towers.append(towers.Ashroom.Ashroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                    elif element.name == &#34;WSshroom&#34;:
+                        self.towers.append(towers.WSshroom.WSshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+
+                    if element.placement_type == &#34;Ground&#34;:
+                        self.map.tower_places.remove(placement)
+                    elif element.placement_type == &#34;Water&#34;:
+                        self.map.water_places.remove(placement)
+                    self.money -= element.assigned_tower.cost
+
+    def game_over(self) -&gt; bool:
+        &#34;&#34;&#34;Méthode créant le menu de fin de partie et renvoyant un booléen décidant
+        si la partie se relance ou si le joueur revient au menu principal&#34;&#34;&#34;
+
+        stop_music(self.map.music)
+        menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state, &#34;Dommage ! Tu as perdu !&#34;, (self.width/2.8, self.height/2.5))
+        return menu.draw(self)
+
+    def win(self) -&gt; bool:
+        &#34;&#34;&#34;Méthode créant le menu de fin de partie et ajoutant la médaille associée
+        à la difficulté de la partie gagnée, la méthode renvoie un booléen décidant
+        si la partie se relance ou si le joueur revient au menu principal&#34;&#34;&#34;
+
+        stop_music(self.map.music)
+
+        with open(os.path.join(&#34;data&#34;, &#34;medals.json&#34;), &#34;r&#34;) as medals_file:
+            medals = json.load(medals_file)
+            medals[self.nom_map][self.difficulty.replace(&#34;_upgrades.json&#34;, &#34;&#34;)] = True
+
+        with open(os.path.join(&#34;data&#34;, &#34;medals.json&#34;), &#34;w&#34;) as medals_file:
+            json.dump(medals, medals_file, indent=4)
+
+        menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state, &#34;Félicitations ! Tu as gagné !&#34;, (self.width/2.95, self.height/2.5))
+        return menu.draw(self)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="ShroomTD.core.Game.Game.buy_tower"><code class="name flex">
+<span>def <span class="ident">buy_tower</span></span>(<span>self, element) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour permettre au joueur d'acheter une tour si il clique sur un bouton:</p>
+<p>Vérifie si le joueur a assez d'argent et enlève l'emplacement de la liste des
+emplacements libres au moment de l'achat</p>
+<ul>
+<li>element: Bouton d'achat de tour (menu d'achat en haut de l'écran)</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def buy_tower(self, element) -&gt; None:
+    &#34;&#34;&#34;Méthode pour permettre au joueur d&#39;acheter une tour si il clique sur un bouton:
+
+    Vérifie si le joueur a assez d&#39;argent et enlève l&#39;emplacement de la liste des
+    emplacements libres au moment de l&#39;achat
+
+    - element: Bouton d&#39;achat de tour (menu d&#39;achat en haut de l&#39;écran)&#34;&#34;&#34;
+
+    if element.rect.collidepoint(pygame.mouse.get_pos()):
+        if self.money &gt;= element.assigned_tower.cost and self.map.tower_places:
+            self.tower_on_cursor = element.name
+            self.selected_tower = None
+            placement = self.select_placement(element.placement_type)
+            if placement is not None:
+                if element.name == &#34;Cshroom&#34;:
+                    self.towers.append(towers.Cshroom.Cshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;Sshroom&#34;:
+                    self.towers.append(towers.Sshroom.Sshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;SNshroom&#34;:
+                    self.towers.append(towers.SNshroom.SNshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;Bshroom&#34;:
+                    self.towers.append(towers.Bshroom.Bshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;Wshroom&#34;:
+                    self.towers.append(towers.Wshroom.Wshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;Gshroom&#34;:
+                    self.towers.append(towers.Gshroom.Gshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;Rshroom&#34;:
+                    self.towers.append(towers.Rshroom.Rshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;SPshroom&#34;:
+                    self.towers.append(towers.SPshroom.SPshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;LPshroom&#34;:
+                    self.towers.append(towers.LPshroom.LPshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;Ushroom&#34;:
+                    self.towers.append(towers.Ushroom.Ushroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;Ashroom&#34;:
+                    self.towers.append(towers.Ashroom.Ashroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+                elif element.name == &#34;WSshroom&#34;:
+                    self.towers.append(towers.WSshroom.WSshroom(placement[0], placement[1], (self.width, self.height), self.difficulty))
+
+                if element.placement_type == &#34;Ground&#34;:
+                    self.map.tower_places.remove(placement)
+                elif element.placement_type == &#34;Water&#34;:
+                    self.map.water_places.remove(placement)
+                self.money -= element.assigned_tower.cost</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.draw_upgrade_menu"><code class="name flex">
+<span>def <span class="ident">draw_upgrade_menu</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour dessiner le menu d'amélioration
+On utilise ici la classe Upgrade_menu ainsi que sa méthode draw</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def draw_upgrade_menu(self) -&gt; None:
+    &#34;&#34;&#34;Méthode pour dessiner le menu d&#39;amélioration
+    On utilise ici la classe Upgrade_menu ainsi que sa méthode draw&#34;&#34;&#34;
+
+    if self.selected_tower is not None:
+        if self.upgrade_menu is None:
+            self.upgrade_menu = Upgrade_menu(self.selected_tower, (self.width, self.height))
+
+        self.upgrade_menu.draw(self.window, self.money)
+
+    else:
+        self.upgrade_menu = None</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.draw_window"><code class="name flex">
+<span>def <span class="ident">draw_window</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour dessiner, actualiser la fenêtre
+(Map, ennemis, tours, projectiles, tour séléctionnée,
+barre en haut de l'écran et menu d'amélioration)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def draw_window(self) -&gt; None:
+    &#34;&#34;&#34;Méthode pour dessiner, actualiser la fenêtre
+    (Map, ennemis, tours, projectiles, tour séléctionnée,
+    barre en haut de l&#39;écran et menu d&#39;amélioration)&#34;&#34;&#34;
+
+    self.window.blit(self.map.bg, (0, self.menu_bar.menu_bar_rect.get_height()))
+
+    for enemy in self.enemies:
+        enemy.draw(self.window)
+
+    for tower in self.towers:
+        tower.draw(self.window)
+    
+    for projectile in self.projectiles:
+        projectile.draw(self.window)
+    
+    if self.selected_tower != None:
+        self.window.blit(self.selected_tower.range_circle, (self.selected_tower.x + self.selected_tower.width//2 - self.selected_tower.range,
+                                  self.selected_tower.y + self.selected_tower.height//2 - self.selected_tower.range))
+        self.window.blit(self.selected_tower.image, (self.selected_tower.x, self.selected_tower.y))
+
+    self.menu_bar.update_texts(self.health, self.money, self.current_wave)
+    self.menu_bar.draw(self.window, (self.width, self.height))
+    self.draw_upgrade_menu()
+
+    if self.available_wave:
+        self.menu_bar.start_wave_button.draw_and_scale(self.window)
+    else:
+        self.window.blit(self.menu_bar.unavailable_button, (self.menu_bar.start_wave_button.x, self.menu_bar.start_wave_button.y))
+    
+    if self.fps == 60:
+        self.menu_bar.accelerate_off_button.draw_and_scale(self.window)
+    else:
+        self.menu_bar.accelerate_on_button.draw_and_scale(self.window)</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.game_over"><code class="name flex">
+<span>def <span class="ident">game_over</span></span>(<span>self) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode créant le menu de fin de partie et renvoyant un booléen décidant
+si la partie se relance ou si le joueur revient au menu principal</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def game_over(self) -&gt; bool:
+    &#34;&#34;&#34;Méthode créant le menu de fin de partie et renvoyant un booléen décidant
+    si la partie se relance ou si le joueur revient au menu principal&#34;&#34;&#34;
+
+    stop_music(self.map.music)
+    menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state, &#34;Dommage ! Tu as perdu !&#34;, (self.width/2.8, self.height/2.5))
+    return menu.draw(self)</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.handle_clicks"><code class="name flex">
+<span>def <span class="ident">handle_clicks</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour gérer les clics efféctués par le joueur
+(Boutons de vague, accélération, amélioration, vente
+(gère aussi la libération des emplacements lors de la vente) et selection de tour)</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def handle_clicks(self) -&gt; None:
+    &#34;&#34;&#34;Méthode pour gérer les clics efféctués par le joueur
+    (Boutons de vague, accélération, amélioration, vente
+    (gère aussi la libération des emplacements lors de la vente) et selection de tour)&#34;&#34;&#34;
+
+    if self.upgrade_menu is None:
+        for available_tower in self.menu_bar.tower_buttons:
+            self.buy_tower(available_tower)
+
+    elif self.upgrade_menu.first_upgrade_button.rect.collidepoint(pygame.mouse.get_pos()):
+        self.money = self.selected_tower.upgrade(self.money, self.escape_menu.sfx_state, 0)
+        self.upgrade_menu.update(self.selected_tower)
+    
+    elif self.upgrade_menu.second_upgrade_button.rect.collidepoint(pygame.mouse.get_pos()):
+        self.money = self.selected_tower.upgrade(self.money, self.escape_menu.sfx_state, 1)
+        self.upgrade_menu.update(self.selected_tower)
+
+    elif self.upgrade_menu.sell_button.rect.collidepoint(pygame.mouse.get_pos()):
+        play_sound(&#34;money.ogg&#34;, 0.3, self.escape_menu.sfx_state)
+
+        if self.selected_tower.placement_type == &#34;Ground&#34;:
+            self.money = self.selected_tower.sell(self.money, self.towers, self.map.tower_places)
+
+        elif self.selected_tower.placement_type == &#34;Water&#34;:
+            self.money = self.selected_tower.sell(self.money, self.towers, self.map.water_places)
+
+        self.selected_tower = None
+
+    if self.menu_bar.start_wave_button.rect.collidepoint(pygame.mouse.get_pos()):
+        self.start_wave()
+
+    #Détecte si une tour à été cliqué, si oui la selectionne
+    else: 
+        for tower in self.towers:
+            if tower.rect.collidepoint(pygame.mouse.get_pos()):
+                self.selected_tower = tower
+                if self.upgrade_menu is not None:
+                    self.upgrade_menu.update(self.selected_tower)
+    
+    for tower in self.towers:
+        if tower.rect.collidepoint(pygame.mouse.get_pos()):
+            self.selected_tower = tower
+    
+    if self.fps == 60:
+        if self.menu_bar.accelerate_off_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.fps = 120
+    else:
+        if self.menu_bar.accelerate_on_button.rect.collidepoint(pygame.mouse.get_pos()):
+            self.fps = 60</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.run"><code class="name flex">
+<span>def <span class="ident">run</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour lancer, faire tourner le jeu
+Cette méthode comprends:
+- La gestion des ennemis/vagues et ses boutons
+- La gestion des clics à l'aide de la méthode handle_clicks()
+- La gestion de fin de jeu
+- La gestion de tirs des tours et projectiles
+- L'affichage de tous les éléments graphiques de la partie</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def run(self) -&gt; None:
+    &#34;&#34;&#34;Méthode pour lancer, faire tourner le jeu
+    Cette méthode comprends:
+    - La gestion des ennemis/vagues et ses boutons
+    - La gestion des clics à l&#39;aide de la méthode handle_clicks()
+    - La gestion de fin de jeu
+    - La gestion de tirs des tours et projectiles
+    - L&#39;affichage de tous les éléments graphiques de la partie&#34;&#34;&#34;
+
+    menu = self.menu
+
+    running = 1
+    while running:
+        self.clock.tick(self.fps)
+        self.current_tick += 1
+        
+        #Trier la liste des ennemis pour que les tours tirent sur le dernier ennemi
+        self.enemies.sort(key=lambda enemy: enemy.distance_travelled, reverse=True)
+        
+        #Remettre le bouton en vert à la fin des vagues
+        if not self.available_wave:
+            if not self.enemies and not self.wave_running:
+                self.available_wave = True
+
+        for event in pygame.event.get():
+            if event.type == pygame.MOUSEBUTTONDOWN:
+                #Clic gauche
+                if event.button == 1:
+                    self.handle_clicks()
+            
+                #Clic droit
+                elif event.button == 3:
+                    self.selected_tower = None
+            
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    running = self.escape_menu.draw_menu(self)
+
+                if event.key == pygame.K_F4:
+                    key = pygame.key.get_pressed()
+                    if key[pygame.K_LALT]:
+                        exit()
+        
+        if self.health &lt;= 0:
+            running = self.game_over()
+        
+        if self.current_wave == self.last_wave and self.available_wave == True:
+            running = self.win()
+
+        #Gerer les ennemis
+        if self.enemies:
+            for enemy in self.enemies:
+                enemy.check_status()
+                enemy.where_to_go(self.map.path)
+                enemy.bar_switch()
+                
+                if enemy.is_out(self.map.path[len(self.map.path)-1]):
+                    self.enemies.remove(enemy)
+                    self.health -= enemy.damage
+                    del enemy
+
+                elif enemy.is_dead():
+                    play_sound([&#34;mort1.ogg&#34;, &#34;mort2.ogg&#34;, &#34;mort3.ogg&#34;, &#34;mort4.ogg&#34;, &#34;mort5.ogg&#34;], 0.3, self.escape_menu.sfx_state)
+                    self.enemies.remove(enemy)
+                    self.money += enemy.money_value
+                    del enemy
+
+        #Tir des tours
+        if self.towers:
+            for tower in self.towers:
+                if self.enemies:
+
+                    targetable_enemies = []
+                    for enemy in self.enemies:
+                        if tower.can_shoot(enemy):
+                            targetable_enemies.append(enemy)
+                    if targetable_enemies != []:
+                        if tower.name == &#34;Gangsta Shroom&#34; or tower.name == &#34;Random Shroom&#34; or tower.name == &#34;Stun Shroom&#34; or tower.name == &#34;Urchin Shroom&#34;:
+                            tower.main_attack(target=None, enemies=targetable_enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                        elif tower.name == &#34;Spirit Shroom&#34;:
+                            tower.main_attack(target=targetable_enemies[len(targetable_enemies)//2], enemies=targetable_enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                        else:
+                            tower.main_attack(target=targetable_enemies[0], enemies=self.enemies, current_tick=self.current_tick, projectiles=self.projectiles)
+                    elif tower.name == &#34;Spirit Shroom&#34;:
+                        tower.reset_sprite()
+                elif tower.name == &#34;Spirit Shroom&#34;:
+                        tower.reset_sprite()
+
+        if self.projectiles:
+            for projectile in self.projectiles:
+                self.projectiles = projectile.handle(self.projectiles)
+
+        if self.wave_running:
+            self.run_wave()
+        
+        if self.upgrade_menu is not None and self.selected_tower is not None:
+            if self.selected_tower.level[0] != &#34;max&#34; and self.selected_tower.level[1] != &#34;max&#34;:
+                self.upgrade_menu.first_upgrade_available = self.money &gt;= self.selected_tower.upgrades[self.selected_tower.name][&#34;0&#34;][str(self.selected_tower.level[0]+1)][&#34;upgrade_cost&#34;]
+                self.upgrade_menu.second_upgrade_available = self.money &gt;= self.selected_tower.upgrades[self.selected_tower.name][&#34;1&#34;][str(self.selected_tower.level[1]+1)][&#34;upgrade_cost&#34;]
+
+        self.draw_window()
+        pygame.display.flip()
+
+    stop_music(self.map.music)
+    fondu_fermer(self.window, (self.width, self.height), 0.5, 50)
+    del self
+    menu.run()</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.run_wave"><code class="name flex">
+<span>def <span class="ident">run_wave</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour envoyer les ennemis de la vague lancée</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def run_wave(self) -&gt; None:
+    &#34;&#34;&#34;Méthode pour envoyer les ennemis de la vague lancée&#34;&#34;&#34;
+    
+    if self.current_tick - self.time_since_last_enemy &gt;= wave(self.current_wave)[self.enemy_index][1]:
+        if self.current_wave != 101: 
+            self.enemies.append(copy.deepcopy(self.convert_waves[wave(self.current_wave)[self.enemy_index][0]]))
+            self.time_since_last_enemy = self.current_tick
+            self.enemy_index += 1
+            if self.enemy_index == len(wave(self.current_wave)):
+                self.wave_running = False
+                self.enemy_index = 0
+        else:
+            pass</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.select_placement"><code class="name flex">
+<span>def <span class="ident">select_placement</span></span>(<span>self, placement_type: str)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour permettre au joueur de choisir l'emplacement de sa nouvelle tour:</p>
+<p>Elle affiche les emplacements disponibles pour la tour séléctionnée et la dessine sur le curseur
+lorsqu'un clic est effectué sur un emplacement, la tour se place et l'emplacement n'est plus libre</p>
+<ul>
+<li>placement_type: chaine de caractères précisant le type d'emplacement (Terre ou eau)</li>
+</ul></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def select_placement(self, placement_type:str):
+    &#34;&#34;&#34;Méthode pour permettre au joueur de choisir l&#39;emplacement de sa nouvelle tour:
+
+    Elle affiche les emplacements disponibles pour la tour séléctionnée et la dessine sur le curseur
+    lorsqu&#39;un clic est effectué sur un emplacement, la tour se place et l&#39;emplacement n&#39;est plus libre
+
+    - placement_type: chaine de caractères précisant le type d&#39;emplacement (Terre ou eau)&#34;&#34;&#34;
+
+    selected_square = []
+    place_circle = pygame.transform.scale(pygame.image.load(os.path.join(&#34;assets&#34;, &#34;other&#34;, &#34;emplacement.png&#34;)).convert_alpha(), (self.width/38.4, self.height/21.6))
+
+    while selected_square == []:
+        self.draw_window()
+
+        if placement_type == &#34;Ground&#34; and self.map.tower_places != [[]]:
+            for place in self.map.tower_places:
+                if self.nom_map == &#34;prairie&#34;:
+                    self.window.blit(place_circle, (place[0]+self.map.unitL/3.2, place[1]+self.map.unit/3.2))
+                else:
+                    self.window.blit(place_circle, (place[0]+self.map.unitL/6.4, place[1]+self.map.unit/6.4))
+
+        elif placement_type == &#34;Water&#34; and self.map.water_places != [[]]:
+            for place in self.map.water_places:
+                if self.nom_map == &#34;prairie&#34;:
+                    self.window.blit(place_circle, (place[0]+self.map.unitL/3.2, place[1]+self.map.unit/3.2))
+                else:
+                    self.window.blit(place_circle, (place[0]+self.map.unitL/6.4, place[1]+self.map.unit/6.4))
+
+        for available_tower in self.menu_bar.tower_buttons:
+            if self.tower_on_cursor == available_tower.name:
+                circle = pygame.Surface((available_tower.assigned_tower.range*2, available_tower.assigned_tower.range*2), pygame.SRCALPHA).convert_alpha()
+                pygame.draw.circle(circle, (50,50,50,128), (available_tower.assigned_tower.range,available_tower.assigned_tower.range),available_tower.assigned_tower.range)
+                self.window.blit(circle, (pygame.mouse.get_pos()[0]-circle.get_width()/2, pygame.mouse.get_pos()[1]-circle.get_height()/2))
+                self.window.blit(available_tower.sprite, (pygame.mouse.get_pos()[0]-available_tower.width/2, pygame.mouse.get_pos()[1]-available_tower.height/2))
+
+        pygame.display.flip()
+
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                if event.key == pygame.K_ESCAPE:
+                    selected_square = None
+
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3:
+                selected_square = None
+
+            if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:        
+                mouse = pygame.mouse.get_pos()
+                if placement_type == &#34;Ground&#34; and self.map.tower_places != [[]]:
+                    for place in self.map.tower_places:
+                        if place[0] &lt;= mouse[0] &lt;= place[0]+self.map.unitL and place[1] &lt;= mouse[1] &lt;= place[1]+self.map.unit:
+                            selected_square = place
+
+                elif placement_type == &#34;Water&#34; and self.map.water_places != [[]]:
+                    for place in self.map.water_places:
+                        if place[0] &lt;= mouse[0] &lt;= place[0]+self.map.unitL and place[1] &lt;= mouse[1] &lt;= place[1]+self.map.unit:
+                            selected_square = place
+
+    return selected_square</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.start_wave"><code class="name flex">
+<span>def <span class="ident">start_wave</span></span>(<span>self) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode pour lancer une vague</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def start_wave(self) -&gt; None:
+    &#34;&#34;&#34;Méthode pour lancer une vague&#34;&#34;&#34;
+
+    if not self.wave_running and not self.enemies:
+        self.wave_running = True
+        self.available_wave = False
+        self.current_wave += 1</code></pre>
+</details>
+</dd>
+<dt id="ShroomTD.core.Game.Game.win"><code class="name flex">
+<span>def <span class="ident">win</span></span>(<span>self) ‑> bool</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Méthode créant le menu de fin de partie et ajoutant la médaille associée
+à la difficulté de la partie gagnée, la méthode renvoie un booléen décidant
+si la partie se relance ou si le joueur revient au menu principal</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def win(self) -&gt; bool:
+    &#34;&#34;&#34;Méthode créant le menu de fin de partie et ajoutant la médaille associée
+    à la difficulté de la partie gagnée, la méthode renvoie un booléen décidant
+    si la partie se relance ou si le joueur revient au menu principal&#34;&#34;&#34;
+
+    stop_music(self.map.music)
+
+    with open(os.path.join(&#34;data&#34;, &#34;medals.json&#34;), &#34;r&#34;) as medals_file:
+        medals = json.load(medals_file)
+        medals[self.nom_map][self.difficulty.replace(&#34;_upgrades.json&#34;, &#34;&#34;)] = True
+
+    with open(os.path.join(&#34;data&#34;, &#34;medals.json&#34;), &#34;w&#34;) as medals_file:
+        json.dump(medals, medals_file, indent=4)
+
+    menu = Game_over_menu((self.width, self.height), self.escape_menu.sfx_state, &#34;Félicitations ! Tu as gagné !&#34;, (self.width/2.95, self.height/2.5))
+    return menu.draw(self)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="ShroomTD.core" href="index.html">ShroomTD.core</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="ShroomTD.core.Game.Game" href="#ShroomTD.core.Game.Game">Game</a></code></h4>
+<ul class="two-column">
+<li><code><a title="ShroomTD.core.Game.Game.buy_tower" href="#ShroomTD.core.Game.Game.buy_tower">buy_tower</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.draw_upgrade_menu" href="#ShroomTD.core.Game.Game.draw_upgrade_menu">draw_upgrade_menu</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.draw_window" href="#ShroomTD.core.Game.Game.draw_window">draw_window</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.game_over" href="#ShroomTD.core.Game.Game.game_over">game_over</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.handle_clicks" href="#ShroomTD.core.Game.Game.handle_clicks">handle_clicks</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.run" href="#ShroomTD.core.Game.Game.run">run</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.run_wave" href="#ShroomTD.core.Game.Game.run_wave">run_wave</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.select_placement" href="#ShroomTD.core.Game.Game.select_placement">select_placement</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.start_wave" href="#ShroomTD.core.Game.Game.start_wave">start_wave</a></code></li>
+<li><code><a title="ShroomTD.core.Game.Game.win" href="#ShroomTD.core.Game.Game.win">win</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
