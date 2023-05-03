@@ -25,8 +25,11 @@ It was also a chance to further develop our skills in python and discover pygame
 
 ## Controls
 LMB = interact, select...
+
 RMB = deselect
+
 Esc = open escape menu
+
 Alt + F4 = quit game in most menus
 
 ## Getting Started
