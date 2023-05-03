@@ -10,6 +10,7 @@ This project uses musics from Waterflame who owns all rights on these musics
 ## Table of Contents
 
 - [About](#about)
+- [Controls](#controls)
 - [Getting Started](#getting_started)
 - [Installing](#installing)
 - [Contributing](#contributing)
@@ -21,6 +22,12 @@ Having always played games, we wanted to make OUR game. So we gathered all we we
 All the assets are made by us (mostly SparkasseLabank) and we decided the universe of the game, we wanted one that would fit us and we came up with that bit of a crazy idea to make mushrooms fight slimes.
 The project took us overall approximately 2 months to make.
 It was also a chance to further develop our skills in python and discover pygame
+
+## Controls
+LMB = interact, select...
+RMB = deselect
+Esc = open escape menu
+Alt + F4 = quit game in most menus
 
 ## Getting Started
 In order for the project to work, you must execute it from the same folder where run.py is
