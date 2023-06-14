@@ -1,10 +1,18 @@
 # Shroom TD
 
+![splash.png](https://i.postimg.cc/kgRgHBZn/splash.png)
+
+>This project is only in french, sry 😅
+
 Shroom TD is a Tower Defense game developed entirely in python using pygame.
 The goal is to place towers (mushrooms) in order to prevent ennemies (slimes) to reach the end of the path,
 And to make it throught all the waves
 
-This project uses musics from Waterflame who owns all rights on these musics
+This project uses musics from [Waterflame](https://waterflame.newgrounds.com/) who owns all rights on these musics
+
+## 🏆Awards🏆
+[Trophées NSI - 2023](https://trophees-nsi.fr/resultats-2023) :
+This project has been selected "Best project - 12th grade" of the "Hauts-de-France" region
 
 
 ## Table of Contents
@@ -16,7 +24,7 @@ This project uses musics from Waterflame who owns all rights on these musics
 - [Contributing](#contributing)
 
 ## About
-This project has been made for the "Trophées NSI" of 2023.
+This project has been made for the "[Trophées NSI](https://trophees-nsi.fr/)" of 2023.
 
 Having always played games, we wanted to make OUR game. So we gathered all we were taught during these past 2 years and decided to try and make a game of one of our favorite genre, a Tower Defense.
 All the assets are made by us (mostly SparkasseLabank) and we decided the universe of the game, we wanted one that would fit us and we came up with that bit of a crazy idea to make mushrooms fight slimes.
@@ -40,11 +48,11 @@ And to not have moved anything from their respective folders
 First, verify you have python and pygame installed
 if you have then you just have to download all the project and it should be working
 in the opposite case, install python
-then install pygame by going in the cmd and type :"pip install pygame"
+then install pygame by going in the cmd and type : "pip install pygame"
 
 ## Contributing
-SparkasseLabank | GitHub
+[SparkasseLabank](https://github.com/SparkasseLabank)
 
-WorKai7 | GitHub
+[WorKai7](https://github.com/WorKai7)
 
-Wolf-Shadow | GitHub
+[Wolf-Shadow](https://github.com/Wolf-Shadow)
