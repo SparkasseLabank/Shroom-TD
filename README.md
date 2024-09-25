@@ -54,5 +54,3 @@ then install pygame by going in the cmd and type : "pip install pygame"
 [SparkasseLabank](https://github.com/SparkasseLabank)
 
 [WorKai7](https://github.com/WorKai7)
-
-[Wolf-Shadow](https://github.com/Wolf-Shadow)
